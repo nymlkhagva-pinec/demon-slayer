@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightsteelblue;
+    width: 1450px;
+    height: 1200px
+}
+.card-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.card{
+    width: 250px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+}
+.img-con{
+    width: 250px;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease;
+    border-radius: 20px;
+}
+.content{
+    display: flex;
+    text-align: center;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 150px;
+    font-size: 20px;
+}
+.content::after{
+    content: '';
+    width: 0%;
+    height: 5px;
+    background-color: crimson;
+    transition: 0.2s;
+}
+.card:hover .content::after{
+    width: 210px
+}
+.card:hover .img{
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
